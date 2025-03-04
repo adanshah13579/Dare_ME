@@ -5,6 +5,7 @@ import MainLayout from "../../layouts/Mainlayout";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import NFTCard from "../../component/NFTcard/Nftcard";
+import NFT from "../../assets/images/NFT.svg"
 
 const TrendingNFT = () => {
   return (
@@ -127,6 +128,9 @@ const TrendingNFT = () => {
             Load More <KeyboardArrowDownIcon fontSize="small" />
           </Button>
         </Box>
+      </Box>
+      <Box sx={{backgroundColor:colors.background}}>
+        <img src={NFT} alt="" style={{width:"100%"}}/>
       </Box>
     </MainLayout>
   );

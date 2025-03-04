@@ -92,7 +92,7 @@ const LiveVideoProfile = () => {
                 fontSize: { xs: "18px", sm: "24px" },
                 color: "white",
                 fontFamily: "poppins",
-                lineHeight: 1.2, // Ensures consistent spacing between lines
+                lineHeight: 1, // Ensures consistent spacing between lines
               }}
             >
               The Pebble
@@ -166,17 +166,19 @@ const LiveVideoProfile = () => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "center", 
+            justifyContent: {xs:"center",sm:"center",lg:"flex-end"}, 
             gap: 2,
+            // marginLeft:"100%"
+            width:"115%"
           }}
         >
           <Button
             sx={{
               backgroundColor: "#6C5DD3",
-              fontSize: { xs: "10px", sm: "12px" },
-              width: { xs: "80px", md: "120px" },
+              fontSize: { xs: "10px", sm: "10px" },
+              width: { xs: "80px", md: "100px" },
               padding: { xs: "5px 10px", sm: "8px 20px" },
-              borderRadius: "15px",
+              borderRadius: "10px",
               boxShadow: 2,
               color: "white",
             }}
@@ -185,9 +187,9 @@ const LiveVideoProfile = () => {
           </Button>
           <Button
             sx={{
-              width: "40px",
-              height: "40px",
-              borderRadius: "10%",
+              width: "20px",
+              height: "30px",
+              borderRadius: "10px",
               backgroundColor: "#F0F3F61A",
             }}
           >
@@ -197,47 +199,57 @@ const LiveVideoProfile = () => {
 
         {/* Row 2: Follow Me Text and Icons */}
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center", // Align to the top-right
-            gap: 0.5,
-          }}
-        >
-          {/* Follow Me Text */}
-          <Typography
-            variant="caption"
-            sx={{
-              color: "gray",
-              fontSize: { xs: "10px", sm: "12px" },
-              left: "0px",
-            }}
-          >
-            Follow me on
-          </Typography>
+  sx={{
+    display: "flex",
+    justifyContent: {xs:"center",sm:"center",lg:"flex-end"},  // Aligns the content to the right
+    width: "120%", 
+  }}
+>
+  <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      // justifyContent: {xs:"center",sm:"center",lg:"flex-end"}, 
+      // marginLeft:"100%",
+      // width:"150%",
+      gap: 0.5,
+    }}
+  >
+    {/* Follow Me Text */}
+    <Typography
+      variant="caption"
+      sx={{
+        color: "gray",
+        fontSize: { xs: "10px", sm: "12px" },
+      }}
+    >
+      Follow me on
+    </Typography>
 
-          {/* Icons */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              gap: 1,
-            }}
-          >
-            <IconButton sx={{ color: "white" }}>
-              <DiscordIcon /> {/* Replace with actual DiscordIcon */}
-            </IconButton>
-            <IconButton sx={{ color: "white" }}>
-              <TwitterIcon />
-            </IconButton>
-            <IconButton sx={{ color: "white" }}>
-              <YouTubeIcon />
-            </IconButton>
-            <IconButton sx={{ color: "white" }}>
-              <InstagramIcon />
-            </IconButton>
-          </Box>
-        </Box>
+    {/* Icons */}
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+      }}
+    >
+      <IconButton sx={{ color: "white" }}>
+        <DiscordIcon sx={{ width: "15px" }} />
+      </IconButton>
+      <IconButton sx={{ color: "white" }}>
+        <TwitterIcon sx={{ width: "15px" }} />
+      </IconButton>
+      <IconButton sx={{ color: "white" }}>
+        <YouTubeIcon sx={{ width: "15px" }} />
+      </IconButton>
+      <IconButton sx={{ color: "white" }}>
+        <InstagramIcon sx={{ width: "15px" }} />
+      </IconButton>
+    </Box>
+  </Box>
+</Box>
+
       </Box>
     </Box>
   );

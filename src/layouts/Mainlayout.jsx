@@ -39,8 +39,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import BrowseCategoryIcon from "@mui/icons-material/Category"; // Add the icon for categories
 import { ExploreOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import girlpic from "../assets/images/str1.png"
-
+import girlpic from "../assets/images/str1.png";
 
 const drawerWidth = 260;
 
@@ -308,12 +307,7 @@ const MainLayout = ({ children }) => {
           )}
         </Box>
         <Divider sx={{ backgroundColor: colors.textColor, opacity: 0.2 }} />
-        <CardComponent
-          text={"Join & Earn"}
-          imageSrc={
-            girlpic
-          }
-        />
+        <CardComponent text={"Join & Earn"} imageSrc={girlpic} />
       </Box>
     );
   };
@@ -340,7 +334,6 @@ const MainLayout = ({ children }) => {
               edge="start"
               onClick={handleDrawerToggle}
               sx={{ mr: 2 }}
-              
             >
               <MenuIcon />
             </IconButton>
@@ -352,7 +345,8 @@ const MainLayout = ({ children }) => {
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              marginRight: { xs: 1, sm: 3 , },
+              ml: -3,
+              marginRight: { xs: 1, sm: 3 },
             }}
             onClick={handleMenuOpen}
           >
@@ -368,6 +362,7 @@ const MainLayout = ({ children }) => {
               variant="body2"
               sx={{
                 color: colors.textColor,
+
                 fontSize: { xs: "0.75rem", sm: "0.875rem" },
                 display: { xs: "none", sm: "block" }, // Hide on mobile
               }}
@@ -486,9 +481,7 @@ const MainLayout = ({ children }) => {
         anchor="left"
         open={isDrawerOpen}
         onClose={handleDrawerToggle}
-        
         sx={{
-
           width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
@@ -498,7 +491,6 @@ const MainLayout = ({ children }) => {
             backgroundColor: colors.background,
             borderRight: "2px solid #474958 !important", // ✅ Force it to appear
 
-          
             color: colors.textColor,
             overflowY: "auto",
             "&::-webkit-scrollbar": {

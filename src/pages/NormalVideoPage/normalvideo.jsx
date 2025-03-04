@@ -84,7 +84,7 @@ const Normalvideopage = () => {
             maxWidth: { md: "65%" }, // Restrict max width for medium screens and above
             height: "auto",
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
             alignItems: "flex-start", // Align content to the start
             justifyContent: "start",
             borderRadius: 2,
@@ -92,7 +92,12 @@ const Normalvideopage = () => {
           }}
         >
           <LiveVideoProfile />
+          {/* <GlassEffectBox/> */}
         </Box>
+
+  {/* Left Side - LiveVideoProfile */}
+
+
 
         {/* Row 3: Component 4 */}
         <Box
@@ -102,7 +107,7 @@ const Normalvideopage = () => {
             height: "auto",
             display: "flex",
             flexDirection: { xs: "column", sm: "column", md: "row" },
-            maxWidth: { xs: "100%", sm: "100%",md:"85%", lg: "80%" },
+            maxWidth: { xs: "100%", sm: "100%",md:"85%", lg: "90%" },
             alignItems: { xs: "center", sm: "center" },
             justifyContent: { xs: "center", sm: "center", md: "center" },
             borderRadius: 2,

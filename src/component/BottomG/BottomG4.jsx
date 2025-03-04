@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem } from "@mui/material";
+import {Avatar, Box, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem } from "@mui/material";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
-
+import nftlogo from "../../assets/images/nftlogo.svg";
+import nftimage from "../../assets/images/nft.png";
+import verified from "../../assets/images/verified.svg";
 const data = [
   { name: "Dec 10", value: 5 },
   { name: "Dec 12", value: 12 },
@@ -79,20 +81,53 @@ const Component4 = () => {
                 <TableCell></TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
-              {listings.map((row, index) => (
-                <TableRow key={index}>
-                  <TableCell sx={{ color: "white" }}>{row.price}</TableCell>
-                  <TableCell sx={{ color: "white" }}>{row.amount}</TableCell>
-                  <TableCell sx={{ color: "white" }}>{row.from}</TableCell>
-                  <TableCell>
-                    <Button variant="contained" sx={{ backgroundColor: "#CEBDFE",color:"#3C1A9B" }}>
-                      Buy
-                    </Button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
+          
+
+<TableBody>
+  {listings.map((row, index) => (
+    <TableRow key={index}>
+      {/* Price with icon */}
+      <TableCell sx={{ color: "white" }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <img src={nftlogo} alt="" style={{ width: "16px", height: "16px", marginRight: "6px" }} />
+          {row.price}
+        </Box>
+      </TableCell>
+
+      {/* Amount */}
+      <TableCell sx={{ color: "white" }}>{row.amount}</TableCell>
+
+      {/* From (User with Avatar) */}
+      <TableCell sx={{ color: "white" }}>
+        <Box sx={{ display: "flex", alignItems: "center",gap:"3px" }}>
+          {/* <img src={nftimage} alt="" /> */}
+          <Avatar
+    src={nftimage}
+    variant="square"
+    sx={{
+      width: 20,
+      height: 20,
+      border: "1px solid #00FFF0",
+      borderRadius: "2px",
+      marginLeft:"-10%"
+    }}
+  />
+  <Avatar src={verified} sx={{ width: 16, height: 16 }} />
+          {/* <Avatar src={row.avatar} sx={{ width: 24, height: 24, marginRight: 1 }} /> */}
+          {row.from}
+        </Box>
+      </TableCell>
+
+      {/* Buy Button */}
+      <TableCell>
+        <Button variant="contained" sx={{ backgroundColor: "#CEBDFE", color: "#3C1A9B" }}>
+          Buy
+        </Button>
+      </TableCell>
+    </TableRow>
+  ))}
+</TableBody>
+
           </Table>
         </TableContainer>
       </Box>

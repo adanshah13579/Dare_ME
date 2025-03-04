@@ -7,6 +7,7 @@ import BottomG from "../../component/BottomG/Bottomg";
 import BottomG2 from "../../component/BottomG/Bottomg2";
 import BottomGDescription from "../../component/BottomG/BottomGdeceription";
 import Component4 from "../../component/BottomG/BottomG4";
+import NFT from "../../assets/images/NFT.svg"
 
 const NFTView = () => {
   return (
@@ -69,6 +70,10 @@ const NFTView = () => {
             <Component4 />
           </Box>
         </Box>
+      </Box>
+
+      <Box sx={{backgroundColor:colors.background}}>
+        <img src={NFT} alt="" style={{width:"100%"}}/>
       </Box>
     </MainLayout>
   );

@@ -27,12 +27,14 @@ import TrendingNFT from "./pages/TrendingNft/TrendingNft";
 import NFTView from "./pages/NftViewPage/Nftview";
 import CreatorStream from "./pages/CreaterStreamPage/CreaterStreamPage";
 import CommunityPage from "./pages/Communityforum/Communityforum";
-
+import PopularVideo from "./pages/PopularVideoPage/popularvideopage"
+import ChannelAnalytics from "./pages/ChannelAnalyticsPage/channelanalyticspage"
+import CreatorHome from "./pages/CreatorHomePage/creatorhomepage"
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/home" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/following" element={<FollowingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignupPage />}></Route>
@@ -52,14 +54,10 @@ const App = () => {
         <Route path="/trendingnft" element={<TrendingNFT />}></Route>
         <Route path="/nftview" element={<NFTView />}></Route>
         <Route path="/creatstream" element={<CreatorStream />}></Route>
-        <Route path="/" element={<CommunityPage />}></Route>
-
-        
-
-
-
-        
-
+        <Route path="/communityforum" element={<CommunityPage />}></Route>
+        <Route path="/popularvideo" element={<PopularVideo />}></Route>
+        <Route path="/channelanalytics" element={<ChannelAnalytics />}></Route>
+        <Route path="/creatorhome" element={<CreatorHome />}></Route>
       </Routes>
     </Router>
   );
